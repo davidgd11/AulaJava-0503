@@ -19,7 +19,6 @@ public class TelevisorEncapsulada {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-		this.volume = volume;
 	}
 
 	
