@@ -1,9 +1,9 @@
 package br.com.fiap;
 
+import java.util.Scanner;
+
 public class UsaTelevisorEncapsulada {
 	public static void main(String[] args) {
-		
-		TelevisorEncapsulada tv = new TelevisorEncapsulada();
 		
 		// tv.setCanal(2);
 		// tv.setVolume(19);
@@ -13,7 +13,9 @@ public class UsaTelevisorEncapsulada {
 		// tv.aumentarVolume();
 		// tv.setCanal(8);
 		// tv.mostrar();
-
+		
+		TelevisorEncapsulada tv = new TelevisorEncapsulada();
+		
 		int escolha = 0;
 		Scanner scan;
 		try{
@@ -36,7 +38,14 @@ public class UsaTelevisorEncapsulada {
 			} else if (escolha == 3){
 				System.out.println("Aumentando volume...");
 				tv.aumentarVolume();
+			} else if (escolha == 4) {
+				System.out.println("Diminuindo volume...");
+				tv.diminuirVolume();
+			} else {
+				System.out.println("Opção incorreta");
 			}
+			tv.mostrar();
+			
 		} catch (Exception e){
 			System.out.println(e.getMessage());
 		}
@@ -44,3 +53,4 @@ public class UsaTelevisorEncapsulada {
 	}
 
 }
+
